@@ -24,13 +24,13 @@ vec3 color(const ray& r) {
 }
 
 int main() {
-    int nx = 1000;
-    int ny = 500;
+    int nx = 1024;
+    int ny = 768;
 
     cout << "P3\n" << nx << " " << ny << "\n255\n";
-    vec3 top_left_corner(-2.0, 1.0, -1.0);
+    vec3 top_left_corner(-2.0, 1.5, -1.0); // 4 x 3 aspect ratio
     vec3 horizontal(4.0, 0.0, 0.0);
-    vec3 vertical(0.0, -2.0, 0.0);
+    vec3 vertical(0.0, -3.0, 0.0);
     vec3 origin(0.0, 0.0, 0.0);
     for (int j = 0; j < ny; j++) {
         for (int i = 0; i < nx; i++) {
